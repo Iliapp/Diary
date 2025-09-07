@@ -1,0 +1,28 @@
+-- -- Add function for trigger
+-- CREATE OR REPLACE FUNCTION update_updated_at_column()
+-- RETURNS TRIGGER AS $$
+-- BEGIN
+--     NEW.updated_at = NOW();
+-- RETURN NEW;
+-- END;
+-- $$ LANGUAGE plpgsql;
+--
+--
+--    -- ADD Trigger for table entries
+--
+-- CREATE TRIGGER set_updated_at
+--     BEFORE UPDATE ON entries
+--     FOR EACH ROW
+--     EXECUTE FUNCTION update_updated_at_column();
+--
+-- --Testing
+--
+-- INSERT INTO users (id, email, display_name_name, pasword_hash)
+-- VALUES ('11111111-1111-1111-1111-111111111111', 'test@example.com', 'Тестовий Користувач', '12345');
+--
+--
+-- INSERT INTO entries (user_id, title, content, mood)
+-- VALUES ('11111111-1111-1111-1111-111111111111', 'Мій перший запис', 'Текст запису', 5);
+--
+--
+-- SELECT * FROM entries;
