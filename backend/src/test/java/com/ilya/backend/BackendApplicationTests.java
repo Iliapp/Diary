@@ -1,10 +1,10 @@
-package com.iliasmakovskiy.diary;
+package com.ilya.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiaryApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
