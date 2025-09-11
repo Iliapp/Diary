@@ -14,7 +14,7 @@ docker-compose up -d
 
 OR
 
-docker-compose up --build
+    docker-compose up --build
 ```
 
 
