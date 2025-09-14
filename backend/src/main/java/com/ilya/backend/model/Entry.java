@@ -1,4 +1,5 @@
-package com.iliasmakovskiy.diary.model;
+package com.ilya.backend.model;
+
 
 import jakarta.persistence.*;
 import lombok.*;

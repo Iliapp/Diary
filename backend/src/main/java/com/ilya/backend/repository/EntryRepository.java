@@ -1,6 +1,8 @@
-package repository;
+package com.ilya.backend.repository;
 
-import com.iliasmakovskiy.diary.model.Entry;
+
+import model.Entry;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
