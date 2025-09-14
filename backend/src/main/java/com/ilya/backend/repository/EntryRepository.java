@@ -1,7 +1,7 @@
 package com.ilya.backend.repository;
 
 
-import model.Entry;
+import com.ilya.backend.model.Entry;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
