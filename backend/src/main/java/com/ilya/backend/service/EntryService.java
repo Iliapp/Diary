@@ -30,6 +30,10 @@ public class EntryService {
     public List<Entry> getAllEntry() {
         return entryRepository.findAll();
     }
+    //find by id
+    public Optional<Entry> getEntryById(UUID id) {
+        return entryRepository.findById(id);
+    }
 
 
 
