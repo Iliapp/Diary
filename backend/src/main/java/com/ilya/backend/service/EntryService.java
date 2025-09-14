@@ -47,7 +47,10 @@ public class EntryService {
 
     }
 
-
+    //delete
+    public void deleteEntry(UUID id) {
+        entryRepository.deleteById(id);
+    }
 
 
 
