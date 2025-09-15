@@ -30,6 +30,11 @@ public class EntryController {
     public Optional<Entry> getEntryById(@PathVariable UUID id) {
         return entryService.getEntryById(id);
     }
+    //create elements
+    @PostMapping
+    public Entry createEntry(@RequestBody Entry entry) {
+        return entryService.createEntry(entry);
+    }
 
 
 
