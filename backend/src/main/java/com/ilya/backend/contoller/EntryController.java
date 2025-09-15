@@ -40,7 +40,11 @@ public class EntryController {
     public Entry updateEntry(@PathVariable UUID id, @RequestBody Entry updateEntry) {
         return entryService.updateEntry(id, updateEntry);
     }
-
+    //delete elments
+    @DeleteMapping("/{id}")
+    public void deleteEntryById(@PathVariable UUID id) {
+        entryService.deleteEntry(id);
+    }
 
 
 
