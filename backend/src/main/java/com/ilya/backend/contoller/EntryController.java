@@ -25,6 +25,11 @@ public class EntryController {
     public List<Entry> getAllEntries() {
         return entryService.getAllEntry();
     }
+    //Get by id
+    @GetMapping("/{id}")
+    public Optional<Entry> getEntryById(@PathVariable UUID id) {
+        return entryService.getEntryById(id);
+    }
 
 
 
