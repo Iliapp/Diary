@@ -35,6 +35,11 @@ public class EntryController {
     public Entry createEntry(@RequestBody Entry entry) {
         return entryService.createEntry(entry);
     }
+    //update elments
+    @PutMapping("/{id}")
+    public Entry updateEntry(@PathVariable UUID id, @RequestBody Entry updateEntry) {
+        return entryService.updateEntry(id, updateEntry);
+    }
 
 
 
