@@ -1,16 +1,17 @@
 package com.ilya.backend.contoller;
 
 
-
+import org.springframework.ui.Model;
 import com.ilya.backend.model.Entry;
 import com.ilya.backend.service.EntryService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RestController
+@Controller
 @RequestMapping("/entries")
 
 public class EntryController {
@@ -22,18 +23,21 @@ public class EntryController {
     }
     //Get all elements
     @GetMapping
-    public List<Entry> getAllEntries() {
-        return entryService.getAllEntry();
+    public String getAllEntries(Model model) {
+        model.addAttribute("entries", entryService.getAllEntry());
+        return "entries"; // entries.html
     }
     //Get by id
-    @GetMapping("/{id}")
-    public Optional<Entry> getEntryById(@PathVariable UUID id) {
-        return entryService.getEntryById(id);
+    @GetMapping("/new")
+    public String newEntryForm(Model model) {
+        model.addAttribute("entry", new Entry());
+        return "entry-form"; // entry-form.html
     }
     //create elements
     @PostMapping
-    public Entry createEntry(@RequestBody Entry entry) {
-        return entryService.createEntry(entry);
+    public String saveEntry(@ModelAttribute Entry entry) {
+        entryService.createEntry(entry);
+        return "redirect:/entries";
     }
     //update elments
     @PutMapping("/{id}")
