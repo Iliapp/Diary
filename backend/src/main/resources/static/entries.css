@@ -10,25 +10,28 @@
     border-bottom-width: 1px;
 }
 
-    .div-header {
-        justify-content: space-between;
-        align-items: center;
-        max-width: 72rem;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
 
-    .h1-Entr {
-        font-family: sans-serif;
-        font-size: 25px;
-        font-weight: normal;
-        font-style: normal;
-        position: relative;
-        top: -5px;
+.div-header {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 72rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    }
+
+.h1-Entr {
+font-family: sans-serif;
+    font-size: 25px;
+    font-weight: normal ;
+    font-style: normal;
+    position: relative;
+    top: -5px;
+
+
+}
 
 /*.hr-line {*/
 /*    width: 100%;*/
@@ -36,6 +39,30 @@
 
 /*}*/
 
+.btn-ADD-NEW-ENTRY {
+    padding: 0.5rem 1rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    background-color: #4b5563;
+    border-radius: 0.5rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid #4b5563;
+
+    font-family: sans-serif;
+    font-weight: normal ;
+    font-style: normal;
+
+    position: relative;
+    top: -5px;
+}
+
+.btn-ADD-NEW-ENTRY:hover {
+background-color: #374151;
+}
 
 
 
