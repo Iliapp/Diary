@@ -33,6 +33,7 @@ public class EntryController {
         model.addAttribute("entry", new Entry());
         return "entry-form"; // entry-form.html
     }
+
     //create elements
     @PostMapping
     public String saveEntry(@ModelAttribute Entry entry) {
