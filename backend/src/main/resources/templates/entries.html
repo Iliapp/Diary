@@ -1,27 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          content="width=device-width, initial-scale=1.0">
     <title>Diary</title>
     <link rel="stylesheet" href="/entries.css" type="text/css">
-
 </head>
 
 <body>
 <header class="header">
-<div class="div-header">
-    <h1 class="h1-Entr">Personal Diary</h1>
-    <button class="btn-ADD-NEW-ENTRY">+ Add New Entry</button>
-<!--    <hr class="hr-line">-->
-</div>
+    <div class="div-header">
+        <h1 class="h1-Entr">Personal Diary</h1>
+        <button class="btn-ADD-NEW-ENTRY">+ Add New Entry</button>
+    </div>
 </header>
 
+<main class="main">
+    <div class="entries-list">
+        <div class="first_table" th:each="entry : ${entries}">
+            <div class="all_inside">
+                <div class="all_inside_Bez_Ed_Del">
+                    <h3 class="h3-Entr" th:text="${entry.title}"></h3>
+                    <p class="p-Entr" th:text="${entry.content}"></p>
+                <div class="mood_and_data">
+                    <div class="mood_and_smile">
+<!--                        <p>Mood:</p>      FIX MOOD -->
+                        <span class="Mood" th:text="${entry.mood}"></span>
+                        <i class="text-neutral-500">
+                            <!-- смайлик -->
+                            <svg class="svg-inline--fa fa-face-smile" aria-hidden="true" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                            </svg>
+                        </i>
+<!--                        <span>January</span>      FIX DATA-->
+                    <span th:text="${#temporals.format(entry.createdAt, 'dd.MM.yyyy HH:mm')}">January</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_Edit_Delete">
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </div>
+        </div>
+        </div>
 
 
-
+</main>
 
 
 </body>

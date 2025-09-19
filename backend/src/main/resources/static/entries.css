@@ -1,3 +1,5 @@
+/* header */
+
 .header {
     box-sizing: border-box;
     border-width: 0;
@@ -65,5 +67,140 @@ background-color: #374151;
 }
 
 
+.main {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 72rem;
+
+}
+
+/* таблички */
+.entries-list {
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.first_table {
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #e5e7eb;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-style: solid;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+
+}
+
+.all_inside {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 1rem;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+
+}
+
+.all_inside_Bez_Ed_Del {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+
+    flex: 1 1 0%;
+}
+
+.h3-Entr {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: inherit;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+
+}
+
+.p-Entr {
+    color: #4b5563;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.75rem;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.mood_and_data {
+    color:#6b7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.mood_and_smile {
+    gap: 0.25rem;
+    align-items: center;
+    display: flex;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.Moood {
+
+}
+
+.text-neutral-500 {
+    color:#6b7280;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.form_Edit_Delete {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
 
