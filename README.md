@@ -52,7 +52,15 @@ src/main/java/com/ilya/backend/
 - Later: add forms for creating and editing entries
 
 
+# 5. 🛠️ Technologies Used
 
+- Java 17
+- Spring Boot 3
+- Spring Data JPA
+- PostgreSQL
+- Flyway
+- Thymeleaf
+- Docker & Docker Compose
 
 
 
