@@ -38,6 +38,12 @@ src/main/java/com/ilya/backend/
 └── service/   -> Business logic
 
 
+# 3. 🌐 API Endpoints
+- GET /entries → get all diary entries
+- GET /entries/{id} → get one entry by ID
+- POST /entries → create a new entry
+- PUT /entries/{id} → update an entry
+- DELETE /entries/{id} → delete an entry
 
 
 
