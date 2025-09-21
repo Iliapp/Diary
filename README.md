@@ -1,5 +1,5 @@
 
-# PgAdmin
+# 1. 🚀 PgAdmin - How to Run
 
 Link
 ```
@@ -25,10 +25,25 @@ docker-compose down
 ```
 
 
+# 2. 📂 Project Structure
+
+src/main/java/com/ilya/backend/
+
+├── controller/ -> REST controllers (API endpoints)
+
+├── model/ -> Entities (Entry, User, Tag…)
+
+├── repository/  -> Database access (JPA Repositories)
+
+└── service/   -> Business logic
 
 
 
-# User Guide
+
+
+
+
+# 6. 👨‍💻 User Guide
 1.Start the application
 ```
 Run the project with Docker (docker-compose up -d).
