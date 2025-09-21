@@ -45,6 +45,14 @@ src/main/java/com/ilya/backend/
 - PUT /entries/{id} → update an entry
 - DELETE /entries/{id} → delete an entry
 
+# 4. 🖼️ Frontend (Thymeleaf)
+
+- entries.html → main page: shows all entries and a button Add New Entry.
+- entriec.css → styling
+- Later: add forms for creating and editing entries
+
+
+
 
 
 
