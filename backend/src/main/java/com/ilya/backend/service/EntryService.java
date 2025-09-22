@@ -32,9 +32,14 @@ public class EntryService {
         return entryRepository.findAll();
     }
     //find by id
-    public Optional<Entry> getEntryById(UUID id) {
-        return entryRepository.findById(id);
+
+    public Entry getEntryById(UUID id) {
+        return entryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Entry not found with id " + id));
     }
+
+
+
     //update
     public Entry updateEntry(UUID id, Entry updateEntry) {
         Entry entry = entryRepository.findById(id).orElseThrow(() -> new RuntimeException("Entry not found"));

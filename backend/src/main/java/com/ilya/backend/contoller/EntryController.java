@@ -7,8 +7,6 @@ import com.ilya.backend.service.EntryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Controller
@@ -40,15 +38,24 @@ public class EntryController {
         entryService.createEntry(entry);
         return "redirect:/entries";
     }
+    // edit
+    @GetMapping("/{id}/edit")
+    public String editEntryForm(@PathVariable UUID id, Model model) {
+        Entry entry = entryService.getEntryById(id);
+        model.addAttribute("entry", entry);
+        return "entry-form"; // та сама форма
+    }
     //update elments
-    @PutMapping("/{id}")
-    public Entry updateEntry(@PathVariable UUID id, @RequestBody Entry updateEntry) {
-        return entryService.updateEntry(id, updateEntry);
+    @PostMapping("/{id}/update")
+    public String updateEntry(@PathVariable UUID id, @ModelAttribute Entry updateEntry) {
+        entryService.updateEntry(id,updateEntry);
+        return "redirect:/entries";
     }
     //delete elments
-    @DeleteMapping("/{id}")
-    public void deleteEntryById(@PathVariable UUID id) {
+    @PostMapping("/{id}/delete")
+    public String deleteEntryById(@PathVariable UUID id) {
         entryService.deleteEntry(id);
+        return "redirect:/entries";
     }
 
 

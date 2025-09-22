@@ -75,7 +75,7 @@ Run the project with Docker (docker-compose up -d).
 
 By default, the app runs on:
 ```
-👉 http://localhost:8080/entries
+👉 http://localhost:9091 or  http://localhost:9091/entries
 ```
 
 3.Add a new entry
