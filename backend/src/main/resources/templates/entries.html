@@ -12,7 +12,9 @@
 <header class="header">
     <div class="div-header">
         <h1 class="h1-Entr">Personal Diary</h1>
-        <button class="btn-ADD-NEW-ENTRY">+ Add New Entry</button>
+        <a th:href="@{/entries/new}">
+            <button class="btn-ADD-NEW-ENTRY" type="button">+ Add New Entry</button>
+        </a>
     </div>
 </header>
 
@@ -41,8 +43,14 @@
             </div>
 
             <div class="form_Edit_Delete">
-                <button class="btn-edit">Edit</button>
-                <button class="btn-delete">Delete</button>
+                <a th:href="@{'/entries/' + ${entry.id} + '/edit'}">
+                    <button class="btn-edit" type="button">Edit</button>
+                </a>
+
+                <form th:action="@{'/entries/' + ${entry.id} + '/delete'}" method="post" style="display:inline">
+                    <button class="btn-delete" type="submit">Delete</button>
+                </form>
+
             </div>
         </div>
         </div>

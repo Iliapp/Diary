@@ -43,7 +43,7 @@ public class EntryController {
     public String editEntryForm(@PathVariable UUID id, Model model) {
         Entry entry = entryService.getEntryById(id);
         model.addAttribute("entry", entry);
-        return "entry-form"; // та сама форма
+        return "entry-form";
     }
     //update elments
     @PostMapping("/{id}/update")
