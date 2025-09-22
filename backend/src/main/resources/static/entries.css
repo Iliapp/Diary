@@ -95,6 +95,7 @@ background-color: #374151;
     flex-direction: column; /* вертикально */
     gap: 1rem; /* відстань між блоками */
     padding: 2rem;
+
 }
 
 .first_table {
@@ -112,6 +113,7 @@ background-color: #374151;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 1rem; /* відстань між записами */
+
 
 }
 
@@ -239,6 +241,31 @@ background-color: #374151;
 
 
 }
+
+
+.btn-delete {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-color: #d1d5db;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.delete-icon {
+    margin-right: 0.25rem;
+    overflow: visible;
+    height: 1em;
+    color: #6b7280;
+}
+
+
 
 
 /* style for entry-form.html */
