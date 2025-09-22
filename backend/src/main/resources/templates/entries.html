@@ -29,16 +29,63 @@
                 <div class="mood_and_data">
                     <div class="mood_and_smile">
 <!--                        <p>Mood:</p>      FIX MOOD -->
-                        <span class="Mood" th:text="${entry.mood}"></span>
-                        <i class="text-neutral-500">
-                            <!-- смайлик -->
-                            <svg class="svg-inline--fa fa-face-smile" aria-hidden="true" viewBox="0 0 512 512">
-                                <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        <span>Mood:</span>
+                        <span th:switch="${entry.mood}">
+    <!-- Дуже сумний -->
+                        <i th:case="1" class="text-red-600">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                                <path d="M8 16 Q12 12 16 16" stroke="currentColor" stroke-width="2" fill="none"/>
                             </svg>
                         </i>
-<!--                        <span>January</span>      FIX DATA-->
-                    <span th:text="${#temporals.format(entry.createdAt, 'dd.MM.yyyy HH:mm')}">January</span>
+
+                                                <!-- Сумний -->
+                        <i th:case="2" class="text-orange-500">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                                <path d="M8 16 Q12 14 16 16" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </i>
+
+                                                <!-- Нейтральний -->
+                        <i th:case="3" class="text-gray-500">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                                <line x1="8" y1="16" x2="16" y2="16" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </i>
+
+                                                <!-- Щасливий -->
+                        <i th:case="4" class="text-yellow-500">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                                <path d="M8 16 Q12 20 16 16" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </i>
+
+                                                <!-- Дуже щасливий -->
+                        <i th:case="5" class="text-green-500">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                                <path d="M8 16 Q12 22 16 16" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </i>
+                    </span>
+
+                    <span class="Mood" th:text="${entry.mood}"></span>
+                        <p>/5</p>
                     </div>
+                    <span th:text="${#temporals.format(entry.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
                 </div>
             </div>
 
@@ -52,8 +99,6 @@
                         </i>
                         Edit
                     </button>
-
-
                 </a>
 
                 <form th:action="@{'/entries/' + ${entry.id} + '/delete'}" method="post" style="display:inline">
