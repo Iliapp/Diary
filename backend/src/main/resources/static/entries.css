@@ -1,5 +1,21 @@
 /* header */
 
+.body {
+    /*background-color: #e5e7eb;*/
+    /*border-color: #e5e7eb;*/
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+}
+
+
+.main {
+    /*box-sizing: border-box;*/
+    /*border-width: 0;*/
+    /*border-style: solid;*/
+    /*background-color: #e5e7eb;*/
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+}
 .header {
     box-sizing: border-box;
     border-width: 0;
@@ -10,6 +26,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border-bottom-width: 1px;
+    background-color: #fff;
 }
 
 
@@ -270,4 +287,23 @@ background-color: #374151;
 
 /* style for entry-form.html */
 
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+    border-top-width: 1px;
+    margin-top: 3rem;
+}
 
+.foot-container {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
