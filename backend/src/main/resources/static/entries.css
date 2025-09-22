@@ -157,11 +157,11 @@ background-color: #374151;
 }
 
 .h3-Entr {
-    color: #111827;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-bottom: 0.5rem;
-    font-weight: inherit;
+    font-family: 'Merriweather', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
 
     box-sizing: border-box;
     border-width: 0;
@@ -171,10 +171,11 @@ background-color: #374151;
 }
 
 .p-Entr {
-    color: #4b5563;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #374151;
+    margin-bottom: 0.4rem;
 
     box-sizing: border-box;
     border-width: 0;
@@ -189,6 +190,7 @@ background-color: #374151;
     gap: 1rem;
     align-items: center;
     display: flex;
+    margin-top: 0.4rem;
 
     box-sizing: border-box;
     border-width: 0;
