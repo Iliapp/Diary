@@ -22,7 +22,7 @@ public class Entry {
     @GeneratedValue
     private UUID id;
 
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "user_id", nullable = true)
     private UUID userId;
 
     @Column(nullable = false)

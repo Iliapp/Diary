@@ -1,14 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Entry Form</title>
 </head>
 <body>
 
+
+<h1 th:text="${entry.id} != null ? 'Edit Entry' : 'New Entry' ">Entry Form</h1>
+
+<form th:action="@{${entry.id} != null ? '/entries/' + ${entry.id} + '/update' : '/entries'}"
+      method="post"
+      th:object="${entry}">
+
+    <label>Title</label>
+    <input type="text" th:field="*{title}" placeholder="Enter Title" required/>
+
+    <label>Content</label>
+    <textarea th:field="*{content}" placeholder="Enter Content" required></textarea>
+
+    <label>Mood</label>
+    <input type="text" th:field="*{mood}" placeholder="Enter Mood" required/>
+
+    <button type="submit">Save</button>
+
+</form>
+
+<a th:href="@{/entries}"><button type="button">Back to Entries</button></a>
 
 
 

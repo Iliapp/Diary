@@ -35,6 +35,7 @@ public class EntryController {
     //create elements
     @PostMapping
     public String saveEntry(@ModelAttribute Entry entry) {
+        entry.setUserId(UUID.fromString("11111111-1111-1111-1111-111111111111"));
         entryService.createEntry(entry);
         return "redirect:/entries";
     }
