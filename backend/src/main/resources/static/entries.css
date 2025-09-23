@@ -296,7 +296,7 @@ background-color: #374151;
 
 
 
-/* style for entry-form.html */
+
 
 .footer {
     padding-top: 2rem;
@@ -318,3 +318,76 @@ background-color: #374151;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* style for entry-form.html */
+.entry-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.entry-form h1 {
+    margin-bottom: 1rem;
+    margin-left: 37%;
+    position: relative;
+    top: -2ex;
+    font-family: sans-serif;
+
+}
+
+.entry-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-left: 37%
+
+}
+
+.entry-form textarea,
+.entry-form input {
+    margin-left: 37%;
+    border-radius: 0.5ex;
+    width: 25%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: 14px;;
+
+}
+
+
+.entry-form button:hover {
+    background: #374151;
+}
+
+.btn-save {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #4b5563;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 45%;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem;
+    background:  #4b5563;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 79%;
+
+}
+
+
+

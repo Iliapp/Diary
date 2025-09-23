@@ -10,10 +10,15 @@
 </head>
 <body>
 
+<div class="entry-form">
+
+    <a th:href="@{/entries}">
+        <button class="btn-back" type="button">Back to Entries</button></a>
+
 
 <h1 th:text="${entry.id} != null ? 'Edit Entry' : 'New Entry' ">Entry Form</h1>
 
-<form th:action="@{${entry.id} != null ? '/entries/' + ${entry.id} + '/update' : '/entries'}"
+<form th:action="@{${entry.id}!= null ? '/entries/' + ${entry.id} + '/update' : '/entries'}"
       method="post"
       th:object="${entry}">
 
@@ -24,20 +29,16 @@
     <textarea th:field="*{content}" placeholder="Enter Content" required></textarea>
 
     <label>Mood</label>
-    <input type="text" th:field="*{mood}" placeholder="Enter Mood" required/>
+    <input type="text" th:field="*{mood}" placeholder="Enter Mood" required/> <br>
 
-    <button type="submit">Save</button>
+    <button class="btn-save" type="submit">Save</button>
 
 </form>
 
-<a th:href="@{/entries}"><button type="button">Back to Entries</button></a>
 
 
 
-
-
-
-
+</div>
 
 </body>
 </html>
