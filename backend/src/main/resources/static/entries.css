@@ -254,6 +254,9 @@ background-color: #374151;
 
 
 }
+.btn-edit:hover {
+    background-color: #f9fafb
+}
 
 .edit-icon {
     margin-right: 0.25rem;
@@ -277,6 +280,10 @@ background-color: #374151;
     cursor: pointer;
     background-color: transparent;
 
+}
+
+.btn-delete:hover {
+    background-color: #f9fafb;
 }
 
 .delete-icon {
